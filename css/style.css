@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;900&display=swap");
+
+:root {
+  --color-primary: #1c1c1c;
+  --color-secondary: #ffffff;
+  --color-accent: #f7f7f7;
+  --color-sub-headings: #343434;
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  font-weight: 400;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+section {
+  padding: 70px 0;
+}
+
+h2 {
+  color: var(--color-sub-headings);
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 5px;
+  background-color: #03534d;
+  top: 70%;
+  left: 50%;
+  translate: -50%;
+}
+
+p {
+  font-family: var(--font-secondary);
+}
+
+/* ----------- Fixed Items Start ----------- */
+/* ----------- Fixed Items End ----------- */
+
+/* ----------- NavBar Styling Start ----------- */
+.navbar {
+  height: 60px;
+  z-index: 999 !important;
+}
+
+.nav-menu {
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+
+.nav-menu li a {
+  color: inherit;
+}
+
+.nav-link {
+  position: relative;
+  padding-left: 0 !important;
+  padding-right: 20px !important;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: calc(100%);
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--color-primary);
+  transition: width 0.3s;
+}
+
+.nav-link.active::before {
+  width: 40px;
+}
+
+/* ----------- NavBar Styling End ----------- */
+
+/* ----------- Home Styling Start ----------- */
+.home {
+  background: url(../img/bg.jpg) center no-repeat;
+  background-size: cover;
+  color: var(--color-accent);
+  padding: 0;
+}
+
+.text span {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.text .hero-name {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+.text h1 {
+  font-weight: 300;
+  font-size: 50px;
+}
+
+.social-menu li {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.466);
+}
+
+/* ----------- Home Styling End ----------- */
+
+/* ----------- About Styling Start ----------- */
+.about {
+  width: 80%;
+  background-color: var(--color-secondary);
+  color: var(--color-sub-headings);
+}
+
+.about .hero-img img {
+  max-height: 100%;
+  max-width: 100%;
+  padding-left: 25px;
+}
+
+h2.clear-after::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 0px;
+}
+
+.skills .progress {
+  height: 25px;
+}
+
+.progress-bar {
+  background-color: var(--color-primary);
+}
+
+.btn-black {
+  background-color: var(--color-primary);
+  font-family: var(--font-secondary);
+  color: var(--color-accent);
+  border: var(--color-primary) 1px solid;
+  font-size: 0.9rem;
+  font-weight: 100;
+  transition: background-color 0.5s;
+}
+
+.btn-black:hover {
+  background-color: transparent;
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
+  border: var(--color-primary) 1px solid;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+.btn-white {
+  background-color: transparent;
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
+  border: var(--color-primary) 1px solid;
+  font-size: 0.9rem;
+  font-weight: 100;
+  transition: background-color 0.5s;
+}
+
+.btn-white:hover {
+  background-color: var(--color-primary);
+  font-family: var(--font-secondary);
+  color: var(--color-accent);
+  border: var(--color-primary) 1px solid;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+/* ----------- About Styling End ----------- */
+
+/* ----------- Services Styling Start ----------- */
+.servcies {
+  background-color: var(--color-accent);
+}
+
+
+
+/* ----------- Services Styling End ----------- */
+
+/* ----------- Work Styling Start ----------- */
+
+.nav-pills {
+  font-family: var(--font-secondary);
+  font-size: 0.9375rem;
+  color: var(--color-primary) !important;
+}
+
+#work .nav-pills .nav-link {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-radius: 0;
+  transition: border-bottom 0.3s;
+}
+
+/* #work .nav-pills .nav-link.active{
+    border-bottom: 2px solid var(--color-primary);
+} */
+
+/* #work .nav-pills .nav-link.active::after{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 5px;
+    background-color: #03534D;
+    top: 70%;
+    left: 50%;
+    translate: -50%;
+} */
+/* ----------- Work Styling End ----------- */
+.work {
+  width: 80%;
+  background-color: var(--color-secondary);
+  color: var(--color-sub-headings);
+}
+
+.work-img:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  padding: 5px !important;
+  color: var(--color-sub-headings);
+  background-color: var(--color-accent);
+  border: 5px transparent solid !important;
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s;
+}
+
+.overlay-menu li {
+  width: 32px;
+  height: 32px;
+}
+
+#work .overlay-menu li a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  border: 1px solid var(--color-primary);
+}
+
+.blog {
+  background-color: var(--color-accent);
+  color: var(--color-sub-headings);
+}
+
+.blog .carousel-indicators [data-bs-target] {
+  text-indent: unset;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.blog .carousel-indicators {
+  bottom: -25px;
+}
+
+.blog .carousel-item img {
+  scale: 0;
+  transition: 1s;
+}
+
+.blog .carousel-item h4,
+.blog .carousel-item h6,
+.blog .carousel-item p {
+  translate: 100%;
+  transition: 1s;
+}
+
+.blog .carousel-item.active img {
+  scale: 1.1;
+}
+
+.blog .carousel-item.active h4,
+.blog .carousel-item.active h6,
+.blog .carousel-item.active p {
+  translate: 0;
+}
+
+.counter {
+  background-color: var(--color-secondary);
+  padding: 100px;
+}
+
+/* ----------- Blog Styling Start ----------- */
+
+.our-blog {
+  background-color: var(--color-accent);
+}
+
+.our-blog .btn-slide {
+  padding: 0;
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-sub-headings);
+  opacity: 50%;
+}
+
+.our-blog .btn-slide.active {
+  padding: 0;
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-sub-headings);
+}
+
+.card-text {
+  font-family: var(--font-secondary);
+  color: var(--color-sub-headings);
+}
+
+.card-text h3 {
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text .card-link {
+  text-decoration: underline;
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
+/* ----------- End Styling Start ----------- */
+.end {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 15px;
+}
+
+/* ----------- End Styling End ----------- */
